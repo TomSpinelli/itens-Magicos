@@ -1,14 +1,13 @@
 import { Component } from '@angular/core';
-
 import { FormsModule } from '@angular/forms';
-import { CommonModule } from '@angular/common';
 import { CardItemComponent } from "../card-item/card-item.component";
 import { Item } from '../../../models/item.model';
+import { SharedModule } from '../../../shared/shared.module';
 
 @Component({
   selector: 'app-cadastro-item',
   standalone: true,
-  imports: [FormsModule, CommonModule, CardItemComponent],
+  imports: [FormsModule, SharedModule, CardItemComponent],
   templateUrl: './cadastro-item.component.html',
   styleUrl: './cadastro-item.component.css'
 })

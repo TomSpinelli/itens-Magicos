@@ -1,0 +1,16 @@
+<h2 class="titulo">Lista de personagem</h2>
+
+<div class="loading" *ngIf="carregando">Carregando...</div>
+<div class="error" *ngIf="erro">Erro: {{erro}}</div>
+
+<div class="lista" *ngIf="!carregando && !erro">
+    <app-card-personagem 
+    
+        *ngFor="let item of personagens" 
+        [personagem]="item"
+        (personagemExcluido)="listarPersonagens()"
+        />
+</div>
+
+
+<button (click)="listarPersonagens()">Buscar</button>
