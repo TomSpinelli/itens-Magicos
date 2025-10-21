@@ -1,0 +1,7 @@
+.lista-cards{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap:60px;
+    padding: 30px;
+}

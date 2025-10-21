@@ -1,0 +1,23 @@
+<div class="container">
+    <h1>Itens</h1>
+
+    <div class="form">
+        <p>Nome</p>
+        <input type="text" [(ngModel)]="novoItem.nome">
+        
+        <p>Tipo</p>
+        <select [(ngModel)]="novoItem.tipo">
+            <option [value]="t" *ngFor="let t of tipos">{{t}}</option>
+        </select>
+
+        <p>Poder</p>
+        <input type="number" [(ngModel)]="novoItem.poder">
+     
+        <button (click)="salvarItem()">Salvar</button>
+    </div>
+
+    <h2>Itens Cadastrados</h2>
+    <div class="lista" *ngIf="itens.length > 0">
+        <app-card-item  *ngFor="let i of itens" [item]="i"/> 
+    </div>
+</div>

@@ -1,0 +1,28 @@
+
+<div class="container-cadastro">
+    <h1>Cadastro Personagens</h1>
+
+    <div class="form">
+        <label>Nome</label>
+        <input [(ngModel)]="novoPersonagem.nome" type="text" placeholder="Ex: frodo">
+        
+        <br>
+        
+        <label>Raça</label>
+        <input [(ngModel)]="novoPersonagem.raca" type="text" placeholder="Ex: hobbit">
+               
+        <br>
+
+        <label for="color">Cor:</label>
+        <input type="color" id="color" [(ngModel)]="novoPersonagem.color" name="color">
+       
+        <button (click)="salvarPersonagem()">Salvar</button>
+
+    </div>
+
+     <h2>Personagens Cadastrados</h2>
+    <div class="lista" *ngIf="personagens.length > 0">
+        <app-card-personagem  *ngFor="let p of personagens" [personagem]="p"/> 
+    </div>
+
+</div>
